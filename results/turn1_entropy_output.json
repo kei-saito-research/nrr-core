@@ -68,33 +68,10 @@
     "nrr_h_mean": 0.9067646952600754,
     "nrr_h_std": 0.0357015085982959,
     "mean_diff": 0.7591186142430086,
-    "se_diff": 0.05695538597853563,
-    "t_statistic": 13.328302516097288,
+    "se_diff": 0.06367805736637203,
+    "t_statistic": 11.921196180270007,
     "nrr_wins": 5,
     "total_seeds": 5,
     "unit": "bits (log\u2082)"
-  },
-  "verification": {
-    "baseline_h_mean": {
-      "expected": 0.15,
-      "actual": 0.1476460810170667,
-      "pass": true
-    },
-    "nrr_h_mean": {
-      "expected": 0.91,
-      "actual": 0.9067646952600754,
-      "pass": true
-    },
-    "nrr_wins_all": {
-      "expected": 5,
-      "actual": 5,
-      "pass": true
-    },
-    "t_significant": {
-      "expected": "> 2.0",
-      "actual": 13.328302516097288,
-      "pass": true
-    }
-  },
-  "all_pass": true
+  }
 }
