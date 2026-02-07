@@ -1,0 +1,100 @@
+{
+  "experiment": "Turn 1 Entropy Verification",
+  "paper": "arXiv:2512.13478",
+  "table": "Table 1",
+  "unit": "bits (log\u2082)",
+  "summary": {
+    "seeds": [
+      42,
+      123,
+      456,
+      789,
+      1000
+    ],
+    "per_seed": [
+      {
+        "seed": 42,
+        "baseline_h_mean": 0.16025506849601115,
+        "baseline_h_std": 0.006661322741021432,
+        "nrr_h_mean": 0.8642443194015911,
+        "nrr_h_std": 0.005858633074336184,
+        "gate_entropy": 0.999852627060617,
+        "baseline_context_acc": 1.0,
+        "nrr_context_acc": 1.0
+      },
+      {
+        "seed": 123,
+        "baseline_h_mean": 0.1614796305571706,
+        "baseline_h_std": 0.003221623624342929,
+        "nrr_h_mean": 0.9465643664378149,
+        "nrr_h_std": 0.006601502968316173,
+        "gate_entropy": 0.9999943201676581,
+        "baseline_context_acc": 1.0,
+        "nrr_context_acc": 1.0
+      },
+      {
+        "seed": 456,
+        "baseline_h_mean": 0.032831205976854384,
+        "baseline_h_std": 0.001088090247203773,
+        "nrr_h_mean": 0.9417173505937856,
+        "nrr_h_std": 0.005535289967862512,
+        "gate_entropy": 0.9999995614567178,
+        "baseline_context_acc": 1.0,
+        "nrr_context_acc": 1.0
+      },
+      {
+        "seed": 789,
+        "baseline_h_mean": 0.012529562580717468,
+        "baseline_h_std": 0.0008260579919718394,
+        "nrr_h_mean": 0.8657503770605893,
+        "nrr_h_std": 0.013796822301946846,
+        "gate_entropy": 0.999711166055683,
+        "baseline_context_acc": 1.0,
+        "nrr_context_acc": 1.0
+      },
+      {
+        "seed": 1000,
+        "baseline_h_mean": 0.3711349374745798,
+        "baseline_h_std": 0.0181278266617495,
+        "nrr_h_mean": 0.915547062806596,
+        "nrr_h_std": 0.014453864178120638,
+        "gate_entropy": 0.9999966240669574,
+        "baseline_context_acc": 1.0,
+        "nrr_context_acc": 1.0
+      }
+    ],
+    "baseline_h_mean": 0.1476460810170667,
+    "baseline_h_std": 0.12785660069286173,
+    "nrr_h_mean": 0.9067646952600754,
+    "nrr_h_std": 0.0357015085982959,
+    "mean_diff": 0.7591186142430086,
+    "se_diff": 0.05695538597853563,
+    "t_statistic": 13.328302516097288,
+    "nrr_wins": 5,
+    "total_seeds": 5,
+    "unit": "bits (log\u2082)"
+  },
+  "verification": {
+    "baseline_h_mean": {
+      "expected": 0.15,
+      "actual": 0.1476460810170667,
+      "pass": true
+    },
+    "nrr_h_mean": {
+      "expected": 0.91,
+      "actual": 0.9067646952600754,
+      "pass": true
+    },
+    "nrr_wins_all": {
+      "expected": 5,
+      "actual": 5,
+      "pass": true
+    },
+    "t_significant": {
+      "expected": "> 2.0",
+      "actual": 13.328302516097288,
+      "pass": true
+    }
+  },
+  "all_pass": true
+}
