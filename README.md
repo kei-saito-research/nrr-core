@@ -35,7 +35,7 @@ Rather than measuring classification accuracy (which can be seed-dependent), we 
 | NRR-lite | **0.91 ± 0.04**      | 1.00         | 100%             |
 
 *All entropy values in **bits** (base-2 logarithm). Max entropy = log₂(2) = 1.00 bits.*  
-*5 random seeds. t = 13.33, p < 0.001.*
+*5 random seeds. t = 11.92, p < 0.001.*
 
 **Key findings:**
 1. NRR-lite maintains near-maximum entropy (H ≈ 0.91) at Turn 1 — ambiguity preserved
@@ -100,7 +100,7 @@ VERIFICATION AGAINST TABLE 1
   [PASS] baseline_h_mean: expected 0.15, got 0.148 bits
   [PASS] nrr_h_mean: expected 0.91, got 0.907 bits
   [PASS] nrr_wins_all: expected 5, got 5
-  [PASS] t_significant: expected > 2.0, got 13.328
+  [PASS] t_significant: expected > 2.0, got 11.921
 
   ALL CHECKS PASSED
 ```
