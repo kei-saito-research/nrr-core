@@ -158,20 +158,6 @@ No deep learning framework required. All operations are pure NumPy.
 }
 ```
 
-## Commercial Use
-
-This work is released openly.
-
-If you plan to use it in a commercial or production setting,
-a short message would be appreciated.
-It helps me understand real-world use and continue the research.
-
-## License
-
-CC BY 4.0 License. See [LICENSE](LICENSE).
-
----
-
 ## Technical Notes
 
 ### Entropy Calculation
@@ -189,3 +175,24 @@ This ensures consistency with the paper's mathematical formulation (Section 6, E
 ### Reproducibility
 
 The experiment uses fixed random seeds (42, 123, 456, 789, 1000) for reproducibility. However, due to the simplified backpropagation and small model size, individual seed results may vary slightly from run to run. The aggregate statistics (mean ± std) should match the paper within tolerance (±0.03 bits).
+
+## Commercial Use
+
+This work is released openly under a CC BY 4.0 license.
+
+If you plan to use it in a commercial or production setting,
+a short message would be appreciated.
+It helps me understand real-world use and continue the research.
+
+## License
+
+CC BY 4.0 License. See [LICENSE](LICENSE).
+
+---
+
+## Contact
+
+Kei Saito  
+Independent Researcher, Japan  
+ORCID: [0009-0006-4715-9176](https://orcid.org/0009-0006-4715-9176)  
+Email: kei.saito.research@gmail.com
