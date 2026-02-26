@@ -6,6 +6,7 @@ Reference implementation for:
 > *arXiv:2512.13478*
 
 Program Map (series hub): [NRR Program Map](./PROGRAM_MAP.md)
+Version mapping source of truth: [`VERSION_MAP.md`](./VERSION_MAP.md)
 
 ## Overview
 
@@ -64,22 +65,35 @@ nrr-core/
 ├── experiments/
 │   └── run_turn1_entropy.py        # Main experiment (reproduces Table 1)
 ├── manuscript/
-│   └── v36/
-│       ├── paper1_nrr-core_v36.tex
-│       ├── figure_nrr_experiment.png
-│       └── checksums_sha256.txt
+│   ├── current/
+│   │   ├── paper1_nrr-core_v24.tex
+│   │   ├── figure_nrr_experiment.png
+│   │   └── checksums_sha256.txt
+│   └── archive/
+│       └── local-v36/
+├── scripts/
+│   └── verify_versions.sh
+├── VERSION_MAP.md
 └── results/
     └── turn1_entropy_output.json   # Verification output
 ```
 
 ## Manuscript Artifacts
 
-The repository includes the manuscript package used for the current public
-Core track snapshot:
+The repository includes a fixed current snapshot and archived later local drafts.
+Mapping is maintained in [`VERSION_MAP.md`](./VERSION_MAP.md).
 
-- `manuscript/v36/paper1_nrr-core_v36.tex`
-- `manuscript/v36/figure_nrr_experiment.png`
-- `manuscript/v36/checksums_sha256.txt`
+- Current (public): `manuscript/current/paper1_nrr-core_v24.tex`
+- Current figures: `manuscript/current/figure_nrr_experiment.png`
+- Archived local draft: `manuscript/archive/local-v36/paper1_nrr-core_v36.tex`
+
+## Version Verification
+
+Run the consistency check before release updates:
+
+```bash
+./scripts/verify_versions.sh
+```
 
 ## Quick Start
 
