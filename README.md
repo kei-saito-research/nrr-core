@@ -63,9 +63,23 @@ nrr-core/
 │   └── training.py                 # Training loop and evaluation
 ├── experiments/
 │   └── run_turn1_entropy.py        # Main experiment (reproduces Table 1)
+├── manuscript/
+│   └── v36/
+│       ├── paper1_nrr-core_v36.tex
+│       ├── figure_nrr_experiment.png
+│       └── checksums_sha256.txt
 └── results/
     └── turn1_entropy_output.json   # Verification output
 ```
+
+## Manuscript Artifacts
+
+The repository includes the manuscript package used for the current public
+Core track snapshot:
+
+- `manuscript/v36/paper1_nrr-core_v36.tex`
+- `manuscript/v36/figure_nrr_experiment.png`
+- `manuscript/v36/checksums_sha256.txt`
 
 ## Quick Start
 

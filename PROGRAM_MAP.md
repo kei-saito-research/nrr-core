@@ -8,8 +8,8 @@ For the latest status, links, and read order, use this page only.
 2. **NRR-Phi** (text-to-state mapping + operator principles)
 3. **NRR-IME** (implementation on stateless APIs)
 4. **NRR-Transfer** (cross-domain transfer)
-5. **NRR-Principal** (in preparation)
-6. **NRR-Hout** (output-side diagnostic; planned update after Principal)
+5. **NRR-Principles** (in preparation)
+6. **NRR-HOUT** (output-side diagnostic; planned update after Principles)
 
 ## Paper / Code Links
 
@@ -29,12 +29,12 @@ For the latest status, links, and read order, use this page only.
 - Paper: arXiv submission pending
 - Code: [github.com/kei-saito-research/nrr-transfer](https://github.com/kei-saito-research/nrr-transfer)
 
-### 5) NRR-Principal
+### 5) NRR-Principles
 - Paper: in preparation
 - Code: TBD
 
-### 6) NRR-Hout
-- Paper: update planned after Principal
+### 6) NRR-HOUT
+- Paper: update planned after Principles
 - Code: TBD
 
 ## One-Line Scope per Paper
@@ -42,13 +42,13 @@ For the latest status, links, and read order, use this page only.
 - **Phi**: Defines text-to-state mapping and non-collapsing operator conditions.
 - **IME**: Finds the stable implementation pattern (Phase 1.5) for stateless APIs.
 - **Transfer**: Tests whether the same Phase 1.5 interface transfers across domains.
-- **Principal**: Consolidates and formalizes shared design principles.
-- **Hout**: Measures ambiguity preserved on the output side (`H_out`) as a diagnostic layer.
+- **Principles**: Consolidates and formalizes shared design principles.
+- **HOUT**: Measures ambiguity preserved on the output side (`H_out`) as a diagnostic layer.
 
 ## Repro Entry Points
 - Core: `experiments/run_turn1_entropy.py`
 - Phi: see repository `README` and `experiments/`
-- IME / Universal: see repository `README` and `experiments/`
+- IME / Transfer: see repository `README` and `experiments/`
 
 ## Contact
 Questions, implementation discussions, and collaboration ideas are welcome via GitHub Issues / Discussions on the repositories above.
