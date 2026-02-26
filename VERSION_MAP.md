@@ -1,5 +1,6 @@
 # Version Map
 
-| track | release_status | arxiv_id | arxiv_version | repository_policy |
-| --- | --- | --- | --- | --- |
-| core | public | 2512.13478 | v8 | code/data only; manuscript text is hosted on arXiv |
+| track | release_status | arxiv_id | arxiv_version | local_version | manuscript_dir | main_tex | checksum_file |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| core | public | 2512.13478 | v8 | v24 | manuscript/current | paper1_nrr-core_v24.tex | checksums_sha256.txt |
+| core | archive | N/A | N/A | v36 | manuscript/archive/local-v36 | paper1_nrr-core_v36.tex | checksums_sha256.txt |

@@ -21,7 +21,10 @@ python3 experiments/run_turn1_entropy.py --multi
 | Table/Figure | Command | Output file |
 |---|---|---|
 | Paper Table 1 (Turn 1 entropy verification) | `python3 experiments/run_turn1_entropy.py --multi` | `results/turn1_entropy_output.json` |
-| Public manuscript (reference) | N/A | `arXiv:2512.13478v8` |
+| Public manuscript source (current snapshot) | N/A (tracked artifact) | `manuscript/current/paper1_nrr-core_v24.tex` |
+| Public manuscript figure (current snapshot) | N/A (tracked artifact) | `manuscript/current/figure_nrr_experiment.png` |
+| Archived local manuscript snapshot | N/A (tracked artifact) | `manuscript/archive/local-v36/paper1_nrr-core_v36.tex` |
+| Version map | N/A (tracked artifact) | `VERSION_MAP.md` |
 
 ## Known limitations
 - Exact floating-point values can vary slightly by Python/NumPy build.

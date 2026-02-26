@@ -10,7 +10,8 @@ Version mapping source of truth: [`VERSION_MAP.md`](./VERSION_MAP.md)
 
 Publication status:
 - Public manuscript: arXiv:2512.13478v8
-- This repository distributes code/data artifacts; manuscript text files are not included.
+- Current public snapshot in repo: `manuscript/current/paper1_nrr-core_v24.tex`
+- Archived local latest snapshot: `manuscript/archive/local-v36/paper1_nrr-core_v36.tex`
 
 ## Overview
 
@@ -68,9 +69,32 @@ nrr-core/
 │   └── training.py                 # Training loop and evaluation
 ├── experiments/
 │   └── run_turn1_entropy.py        # Main experiment (reproduces Table 1)
+├── manuscript/
+│   ├── current/
+│   │   ├── paper1_nrr-core_v24.tex
+│   │   ├── figure_nrr_experiment.png
+│   │   └── checksums_sha256.txt
+│   └── archive/
+│       └── local-v36/
+├── scripts/
+│   └── verify_versions.sh
 ├── VERSION_MAP.md
 └── results/
     └── turn1_entropy_output.json   # Verification output
+```
+
+## Manuscript Artifacts
+
+Published baseline and local archive mapping is maintained in [`VERSION_MAP.md`](./VERSION_MAP.md).
+
+- Public arXiv line: `2512.13478v8`
+- Current public snapshot in repo: `manuscript/current/paper1_nrr-core_v24.tex`
+- Archived local draft snapshot: `manuscript/archive/local-v36/paper1_nrr-core_v36.tex`
+
+## Version Verification
+
+```bash
+./scripts/verify_versions.sh
 ```
 
 ## Quick Start
