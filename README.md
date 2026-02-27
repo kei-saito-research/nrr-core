@@ -1,9 +1,15 @@
 # NRR-Core
 
-Reference implementation for:
+NRR-Core focuses on **ambiguity-preserving inference** for modern language models. We test how to reduce **premature commitment in LLM decoding** when context is incomplete, and how to avoid **semantic collapse** without blocking final decisions. The operational control question is **defer vs commit** under explicit conditions: preserve alternatives while evidence is weak, then commit when downstream tasks require a single action. This repository packages Turn 1 entropy verification code, reproducibility assets, and public-track manuscript mapping for the NRR series. It is designed for engineering evaluation of polysemy handling, disambiguation timing, and retrieval robustness under ambiguity. The scope is operational: define measurable criteria, run paired checks, and report boundary conditions where baseline behavior remains competitive.
 
-> Saito, K. (2025). **NRR-Core: Non-Resolution Reasoning as a Computational Framework for Contextual Identity and Ambiguity Preservation**.
-> *arXiv:2512.13478*
+**Quick links**
+- [arXiv: 2512.13478](https://arxiv.org/abs/2512.13478)
+- [Positioning (NRR vs related approaches)](./docs/positioning.md)
+- [Search Keywords and Weekly Rank Log](./docs/keywords.md)
+
+**EN/JA query terms**
+- `early commitment` = `早期確定`
+- `ambiguity-preserving inference` = `曖昧性保持推論`
 
 Program Map (series hub): [NRR Program Map](./PROGRAM_MAP.md)
 Version mapping source of truth: [`VERSION_MAP.md`](./VERSION_MAP.md)
