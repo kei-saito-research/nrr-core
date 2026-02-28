@@ -11,7 +11,11 @@ NRR-Core focuses on **ambiguity-preserving inference** for modern language model
 - `early commitment` = `早期確定`
 - `ambiguity-preserving inference` = `曖昧性保持推論`
 
-Program Map (series hub): [NRR Program Map](./PROGRAM_MAP.md)
+## NRR Series Hub (Start here)
+
+This repository is the hub for the NRR series.
+- Program map: [NRR Program Map](./PROGRAM_MAP.md)
+
 Version mapping source of truth: [`VERSION_MAP.md`](./VERSION_MAP.md)
 
 Publication status:
