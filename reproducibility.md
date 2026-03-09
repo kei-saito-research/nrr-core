@@ -21,7 +21,7 @@ python3 experiments/run_turn1_entropy.py --multi
 | Table/Figure | Command | Output file |
 |---|---|---|
 | Paper Table 1 (Turn 1 entropy verification) | `python3 experiments/run_turn1_entropy.py --multi` | `results/turn1_entropy_output.json` |
-| Public manuscript source (current snapshot) | N/A (tracked artifact) | `manuscript/current/paper1_nrr-core_v24.tex` |
+| Public manuscript source (current snapshot) | N/A (tracked artifact) | `manuscript/current/paper1_nrr-core_v38.tex` |
 | Public manuscript figure (current snapshot) | N/A (tracked artifact) | `manuscript/current/figure_nrr_experiment.png` |
 | Archived local manuscript snapshot | N/A (tracked artifact) | `manuscript/archive/local-v36/paper1_nrr-core_v36.tex` |
 | Version map | N/A (tracked artifact) | `VERSION_MAP.md` |
