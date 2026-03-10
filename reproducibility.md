@@ -11,18 +11,30 @@
 - temperature: N/A (no LLM sampling in this repo)
 - trials: 5 seeds (multi-seed aggregate)
 
+## Stable review-package commands
+- Build current manuscript to temp output:
+  - `bash scripts/build_current_manuscript.sh`
+  - output: `/tmp/nrr-core_current_build/paper1_nrr-core_v38.pdf`
+- Verify current package checksums:
+  - `bash scripts/verify_current_package.sh`
+- Reproduce the primary result to temp output:
+  - `bash scripts/run_primary_check.sh`
+  - output: `/tmp/nrr_core_turn1_entropy_output.json`
+
 ## Run commands
 ```bash
 pip install -r requirements.txt
-python3 experiments/run_turn1_entropy.py --multi
+bash scripts/run_primary_check.sh
 ```
 
 ## Artifact map
 | Table/Figure | Command | Output file |
 |---|---|---|
-| Paper Table 1 (Turn 1 entropy verification) | `python3 experiments/run_turn1_entropy.py --multi` | `results/turn1_entropy_output.json` |
+| Paper Table 1 (Turn 1 entropy verification) | `bash scripts/run_primary_check.sh` | `/tmp/nrr_core_turn1_entropy_output.json` |
 | Public manuscript source (current snapshot) | N/A (tracked artifact) | `manuscript/current/paper1_nrr-core_v38.tex` |
 | Public manuscript figure (current snapshot) | N/A (tracked artifact) | `manuscript/current/figure_nrr_experiment.png` |
+| Current package checksum verification | `bash scripts/verify_current_package.sh` | stdout verification for `manuscript/current/checksums_sha256.txt` |
+| Current manuscript build | `bash scripts/build_current_manuscript.sh` | `/tmp/nrr-core_current_build/paper1_nrr-core_v38.pdf` |
 | Archived local manuscript snapshot | N/A (tracked artifact) | `manuscript/archive/local-v36/paper1_nrr-core_v36.tex` |
 | Version map | N/A (tracked artifact) | `VERSION_MAP.md` |
 

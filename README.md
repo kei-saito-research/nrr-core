@@ -20,8 +20,8 @@ For the cross-paper map and current series links, start here:
 Version mapping source of truth: [`VERSION_MAP.md`](./VERSION_MAP.md)
 
 Publication status:
-- Public manuscript on arXiv: `2512.13478v8` (baseline public line)
-- Current replacement snapshot in repo: `manuscript/current/paper1_nrr-core_v38.tex`
+- Current public manuscript on arXiv: `2512.13478v9`
+- Current public source snapshot in repo: `manuscript/current/paper1_nrr-core_v38.tex`
 - Archived public baseline snapshot: `manuscript/archive/public-v24/paper1_nrr-core_v24.tex`
 - Archived local draft snapshot: `manuscript/archive/local-v37/paper1_nrr-core_v37.tex`
 - Series numbering policy: `paper3` is permanently skipped and never reused.
@@ -107,7 +107,8 @@ nrr-core/
 Published baseline and local archive mapping is maintained in [`VERSION_MAP.md`](./VERSION_MAP.md).
 
 - Public arXiv line: `2512.13478v8` (baseline public line)
-- Current replacement snapshot in repo: `manuscript/current/paper1_nrr-core_v38.tex`
+- Current public arXiv line: `2512.13478v9`
+- Current public source snapshot in repo: `manuscript/current/paper1_nrr-core_v38.tex`
 - Archived public baseline snapshot: `manuscript/archive/public-v24/paper1_nrr-core_v24.tex`
 - Archived local draft snapshot: `manuscript/archive/local-v37/paper1_nrr-core_v37.tex`
 
@@ -116,6 +117,11 @@ Published baseline and local archive mapping is maintained in [`VERSION_MAP.md`]
 ```bash
 ./scripts/verify_versions.sh
 ```
+
+Stable review-package entrypoints:
+- `bash scripts/build_current_manuscript.sh`
+- `bash scripts/verify_current_package.sh`
+- `bash scripts/run_primary_check.sh`
 
 ## Quick Start
 
