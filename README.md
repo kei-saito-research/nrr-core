@@ -20,8 +20,8 @@ For the cross-paper map and current series links, start here:
 Version mapping source of truth: [`VERSION_MAP.md`](./VERSION_MAP.md)
 
 Publication status:
-- Current public manuscript on arXiv: `2512.13478v9`
-- Current public source snapshot in repo: `manuscript/current/paper1_nrr-core_v38.tex`
+- Current public manuscript on arXiv: `2512.13478v10`
+- Current public source snapshot in repo: `manuscript/current/paper1_nrr-core_v40.tex`
 - Archived public baseline snapshot: `manuscript/archive/public-v24/paper1_nrr-core_v24.tex`
 - Archived local draft snapshot: `manuscript/archive/local-v37/paper1_nrr-core_v37.tex`
 - Series numbering policy: `paper3` is permanently skipped and never reused.
@@ -88,7 +88,7 @@ nrr-core/
 │   └── run_turn1_entropy.py        # Main experiment (reproduces Table 1)
 ├── manuscript/
 │   ├── current/
-│   │   ├── paper1_nrr-core_v38.tex
+│   │   ├── paper1_nrr-core_v40.tex
 │   │   ├── figure_nrr_experiment.png
 │   │   └── checksums_sha256.txt
 │   └── archive/
@@ -107,8 +107,8 @@ nrr-core/
 Published baseline and local archive mapping is maintained in [`VERSION_MAP.md`](./VERSION_MAP.md).
 
 - Public arXiv line: `2512.13478v8` (baseline public line)
-- Current public arXiv line: `2512.13478v9`
-- Current public source snapshot in repo: `manuscript/current/paper1_nrr-core_v38.tex`
+- Current public arXiv line: `2512.13478v10`
+- Current public source snapshot in repo: `manuscript/current/paper1_nrr-core_v40.tex`
 - Archived public baseline snapshot: `manuscript/archive/public-v24/paper1_nrr-core_v24.tex`
 - Archived local draft snapshot: `manuscript/archive/local-v37/paper1_nrr-core_v37.tex`
 
