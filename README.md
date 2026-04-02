@@ -1,6 +1,6 @@
 # NRR-Core
 
-NRR-Core focuses on **ambiguity-preserving inference** for modern language models. We test how to reduce **premature commitment in LLM decoding** when context is incomplete, and how to avoid **semantic collapse** without blocking final decisions. The operational control question is **defer vs commit** under explicit conditions: preserve alternatives while evidence is weak, then commit when downstream tasks require a single action. This repository packages Turn 1 entropy verification code, reproducibility assets, and public-track manuscript mapping for the NRR series. It is designed for engineering evaluation of polysemy handling, disambiguation timing, and retrieval robustness under ambiguity. The scope is operational: define measurable criteria, run paired checks, and report boundary conditions where baseline behavior remains competitive.
+NRR-Core develops a **foundational ambiguity-preserving inference** framework for modern language models and evaluates it in a controlled Turn 1 entropy verification setting. We study how to reduce **premature commitment in LLM decoding** when context is incomplete, while keeping final commitment available once conditions support fixation. This repository packages the synthetic baseline-vs-NRR-lite verification code, reproducibility assets, and public-track manuscript mapping for the NRR series. It is designed to make the foundational criterion explicit: define measurable non-collapse criteria, run paired checks, and report boundary conditions where the matched single-state baseline remains competitive.
 
 **Quick links**
 - [arXiv: 2512.13478](https://arxiv.org/abs/2512.13478)
@@ -18,12 +18,18 @@ For the cross-paper map and current series links, start here:
 - (repository map) [NRR Program Map](./PROGRAM_MAP.md)
 
 Version mapping source of truth: [`VERSION_MAP.md`](./VERSION_MAP.md)
+For narrow review surfaces, use the current-package sections below first; the
+version map remains a full-repo provenance record and may mention non-bundled
+historical rows.
+
+Part of the Non-Resolution Reasoning (NRR) research program. In the current spine, this repository is the foundation layer that feeds Phi, IME, Transfer, Coupled, Projection, and integrated `paper7`, with downstream carry-forward into Energy and Guarantee.
 
 Publication status:
 - Current public manuscript on arXiv: `2512.13478v10`
-- Current public source snapshot in repo: `manuscript/current/paper1_nrr-core_v40.tex`
-- Archived public baseline snapshot: `manuscript/archive/public-v24/paper1_nrr-core_v24.tex`
-- Archived local draft snapshot: `manuscript/archive/local-v37/paper1_nrr-core_v37.tex`
+- Current narrow review-surface candidate: `manuscript/current/paper1_nrr-core_v43.tex`
+- Full-repo provenance rows, including the public-current `v39` line, the prior
+  derived `v40`/`v41`/`v42` lines, and older historical rows, remain recorded
+  in `VERSION_MAP.md` and may be omitted from narrow review drops.
 - Series numbering policy: `paper3` is permanently skipped and never reused.
 
 ## DOI
@@ -88,15 +94,15 @@ nrr-core/
 │   └── run_turn1_entropy.py        # Main experiment (reproduces Table 1)
 ├── manuscript/
 │   ├── current/
-│   │   ├── paper1_nrr-core_v40.tex
+│   │   ├── paper1_nrr-core_v43.tex
 │   │   ├── figure_nrr_experiment.png
 │   │   └── checksums_sha256.txt
 │   └── archive/
-│       ├── public-v24/
-│       ├── local-v37/
-│       └── local-v36/
+│       └── ...                     # Full-repo history; not required in narrow review surfaces
 ├── scripts/
-│   └── verify_versions.sh
+│   ├── build_current_manuscript.sh
+│   ├── run_primary_check.sh
+│   └── verify_current_package.sh
 ├── VERSION_MAP.md
 └── results/
     └── turn1_entropy_output.json   # Verification output
@@ -106,17 +112,16 @@ nrr-core/
 
 Published baseline and local archive mapping is maintained in [`VERSION_MAP.md`](./VERSION_MAP.md).
 
-- Public arXiv line: `2512.13478v8` (baseline public line)
 - Current public arXiv line: `2512.13478v10`
-- Current public source snapshot in repo: `manuscript/current/paper1_nrr-core_v40.tex`
-- Archived public baseline snapshot: `manuscript/archive/public-v24/paper1_nrr-core_v24.tex`
-- Archived local draft snapshot: `manuscript/archive/local-v37/paper1_nrr-core_v37.tex`
+- Current narrow review-surface candidate: `manuscript/current/paper1_nrr-core_v43.tex`
+- Full-repo provenance rows are kept in `VERSION_MAP.md`; narrow review drops do
+  not need to bundle each historical file listed there.
 
-## Version Verification
+## Review Surface Contract
 
-```bash
-./scripts/verify_versions.sh
-```
+This README describes the current-candidate audit surface. Full-repo provenance
+history remains recorded in `VERSION_MAP.md`, but narrow review drops only need
+the assets explicitly listed in `reproducibility.md`.
 
 Stable review-package entrypoints:
 - `bash scripts/build_current_manuscript.sh`
@@ -204,6 +209,9 @@ No deep learning framework required. All operations are pure NumPy.
 - [NRR-Phi](https://github.com/kei-saito-research/nrr-phi) - Text-to-state mapping *(arXiv:2601.19933)*
 - [NRR-IME](https://github.com/kei-saito-research/nrr-ime) - Structure-aware optimization
 - [NRR-Transfer](https://github.com/kei-saito-research/nrr-transfer) - Cross-domain transfer validation
+- [NRR-Coupled](https://github.com/kei-saito-research/nrr-coupled) - Dependency-aware coupled updates
+- [NRR-Projection](https://github.com/kei-saito-research/nrr-projection) - Projection-side structural bridge
+- [NRR-Principles](https://github.com/kei-saito-research/nrr-principles) - Integrated `paper7` comparison and boundary-honesty line
 
 ## Citation
 

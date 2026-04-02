@@ -4,12 +4,15 @@
 
 This repository snapshot bundles the current manuscript source package together with
 the primary offline verification entrypoint used for the public Core line.
+This reproducibility note describes the narrow current-candidate audit surface;
+`VERSION_MAP.md` remains a full-repo provenance map and may list non-bundled
+historical rows.
 
 ## Stable review-package commands
 
 - Build the current manuscript to temp output:
   - `bash scripts/build_current_manuscript.sh`
-  - output: `/tmp/nrr-core_current_build/paper1_nrr-core_v40.pdf`
+  - output: `/tmp/nrr-core_current_build/paper1_nrr-core_v43.pdf`
 - Verify the current review-package checksum manifest:
   - `bash scripts/verify_current_package.sh`
 - Reproduce the primary result to temp output:
@@ -18,9 +21,14 @@ the primary offline verification entrypoint used for the public Core line.
 
 ## Current review package
 
-- Main TeX: `manuscript/current/paper1_nrr-core_v40.tex`
+- Main TeX: `manuscript/current/paper1_nrr-core_v43.tex`
 - Current manuscript figure: `manuscript/current/figure_nrr_experiment.png`
 - Checksum manifest: `manuscript/current/checksums_sha256.txt`
+- Public arXiv note: the current public repo snapshot remains
+  `manuscript/current/paper1_nrr-core_v39.tex`; the `v40`, `v41`, and `v42`
+  packages named here are prior derived lines, and the `v43` package named here is the current local
+  replacement candidate. In narrow review surfaces, that provenance note does
+  not require bundling the full `v39` source tree.
 
 ## Checksum policy
 
@@ -51,11 +59,11 @@ the primary offline verification entrypoint used for the public Core line.
 | Artifact | Command | Output |
 |---|---|---|
 | Paper Table 1 entropy verification | `bash scripts/run_primary_check.sh` | `/tmp/nrr_core_turn1_entropy_output.json` |
-| Current manuscript build | `bash scripts/build_current_manuscript.sh` | `/tmp/nrr-core_current_build/paper1_nrr-core_v40.pdf` |
+| Current manuscript build | `bash scripts/build_current_manuscript.sh` | `/tmp/nrr-core_current_build/paper1_nrr-core_v43.pdf` |
 | Current package checksum verification | `bash scripts/verify_current_package.sh` | stdout verification for `manuscript/current/checksums_sha256.txt` |
-| Current manuscript source snapshot | N/A (tracked artifact) | `manuscript/current/paper1_nrr-core_v40.tex` |
+| Current manuscript source snapshot | N/A (tracked artifact) | `manuscript/current/paper1_nrr-core_v43.tex` |
 | Current manuscript figure snapshot | N/A (tracked artifact) | `manuscript/current/figure_nrr_experiment.png` |
-| Version map | N/A (tracked artifact) | `VERSION_MAP.md` |
+| Full-repo provenance map | N/A (tracked artifact) | `VERSION_MAP.md` |
 
 ## Known limitations
 
