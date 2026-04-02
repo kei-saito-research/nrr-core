@@ -12,7 +12,9 @@ historical rows.
 
 - Build the current manuscript to temp output:
   - `bash scripts/build_current_manuscript.sh`
-  - output: `/tmp/nrr-core_current_build/paper1_nrr-core_v43.pdf`
+  - output: `/tmp/nrr-core_current_build/paper1_nrr-core_v44.pdf`
+- Verify that `manuscript/current/` contains only the latest `.tex` / `.pdf` pair:
+  - `bash scripts/verify_active_review_surface.sh`
 - Verify the current review-package checksum manifest:
   - `bash scripts/verify_current_package.sh`
 - Reproduce the primary result to temp output:
@@ -21,24 +23,27 @@ historical rows.
 
 ## Current review package
 
-- Main TeX: `manuscript/current/paper1_nrr-core_v43.tex`
-- Current manuscript figure: `manuscript/current/figure_nrr_experiment.png`
-- Checksum manifest: `manuscript/current/checksums_sha256.txt`
+- Main TeX: `manuscript/current/paper1_nrr-core_v44.tex`
+- Main PDF: `manuscript/current/paper1_nrr-core_v44.pdf`
+- Current manuscript figure: `manuscript/figures/figure_nrr_experiment.png`
+- Active review-surface checksum manifest: `manuscript/checksums_active_review_surface_sha256.txt`
+- Current package checksum manifest: `manuscript/checksums_current_package_sha256.txt`
 - Public arXiv note: the current public repo snapshot remains
-  `manuscript/current/paper1_nrr-core_v39.tex`; the `v40`, `v41`, and `v42`
-  packages named here are prior derived lines, and the `v43` package named here is the current local
+  `manuscript/archive/public-v39/paper1_nrr-core_v39.tex`; the `v40`, `v41`,
+  `v42`, and `v43` packages named here are prior derived lines, and the `v44`
+  package named here is the current local
   replacement candidate. In narrow review surfaces, that provenance note does
   not require bundling the full `v39` source tree.
 
 ## Checksum policy
 
-- `manuscript/current/checksums_sha256.txt` covers the tracked files that define the
-  current review package for the latest manuscript line in `manuscript/current/`.
-- Coverage includes the current main `.tex` file and each figure asset consumed by
-  that current manuscript from `manuscript/current/`.
-- Coverage excludes `checksums_sha256.txt` itself, older manuscript versions kept
-  outside the current package, and repo-specific artifacts outside
-  `manuscript/current/` unless a separate manifest is provided.
+- `manuscript/checksums_active_review_surface_sha256.txt` covers the latest
+  `.tex` / `.pdf` pair in `manuscript/current/`.
+- `manuscript/checksums_current_package_sha256.txt` covers the current review
+  package entrypoints, the latest manuscript pair, and the figure asset consumed
+  by that manuscript from `manuscript/figures/`.
+- Coverage excludes older manuscript versions kept under `manuscript/archive/`
+  and generated outputs outside the tracked current package.
 
 ## Environment
 
@@ -59,10 +64,12 @@ historical rows.
 | Artifact | Command | Output |
 |---|---|---|
 | Paper Table 1 entropy verification | `bash scripts/run_primary_check.sh` | `/tmp/nrr_core_turn1_entropy_output.json` |
-| Current manuscript build | `bash scripts/build_current_manuscript.sh` | `/tmp/nrr-core_current_build/paper1_nrr-core_v43.pdf` |
-| Current package checksum verification | `bash scripts/verify_current_package.sh` | stdout verification for `manuscript/current/checksums_sha256.txt` |
-| Current manuscript source snapshot | N/A (tracked artifact) | `manuscript/current/paper1_nrr-core_v43.tex` |
-| Current manuscript figure snapshot | N/A (tracked artifact) | `manuscript/current/figure_nrr_experiment.png` |
+| Current manuscript build | `bash scripts/build_current_manuscript.sh` | `/tmp/nrr-core_current_build/paper1_nrr-core_v44.pdf` |
+| Active review-surface verification | `bash scripts/verify_active_review_surface.sh` | stdout verification for `manuscript/checksums_active_review_surface_sha256.txt` |
+| Current package checksum verification | `bash scripts/verify_current_package.sh` | stdout verification for `manuscript/checksums_current_package_sha256.txt` |
+| Current manuscript source snapshot | N/A (tracked artifact) | `manuscript/current/paper1_nrr-core_v44.tex` |
+| Current manuscript PDF snapshot | N/A (tracked artifact) | `manuscript/current/paper1_nrr-core_v44.pdf` |
+| Current manuscript figure snapshot | N/A (tracked artifact) | `manuscript/figures/figure_nrr_experiment.png` |
 | Full-repo provenance map | N/A (tracked artifact) | `VERSION_MAP.md` |
 
 ## Known limitations

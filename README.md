@@ -22,13 +22,13 @@ For narrow review surfaces, use the current-package sections below first; the
 version map remains a full-repo provenance record and may mention non-bundled
 historical rows.
 
-Part of the Non-Resolution Reasoning (NRR) research program. In the current spine, this repository is the foundation layer that feeds Phi, IME, Transfer, Coupled, Projection, and integrated `paper7`, with downstream carry-forward into Energy and Guarantee.
+Part of the Non-Resolution Reasoning (NRR) research program. In the current spine, this repository is the foundation layer that feeds Phi, IME, Transfer, Coupled, Projection, and `NRR-Patterns`, with downstream carry-forward into Energy and Guarantee.
 
 Publication status:
 - Current public manuscript on arXiv: `2512.13478v10`
-- Current narrow review-surface candidate: `manuscript/current/paper1_nrr-core_v43.tex`
+- Current narrow review-surface candidate: `manuscript/current/paper1_nrr-core_v44.tex`
 - Full-repo provenance rows, including the public-current `v39` line, the prior
-  derived `v40`/`v41`/`v42` lines, and older historical rows, remain recorded
+  derived `v40`/`v41`/`v42`/`v43` lines, and older historical rows, remain recorded
   in `VERSION_MAP.md` and may be omitted from narrow review drops.
 - Series numbering policy: `paper3` is permanently skipped and never reused.
 
@@ -94,14 +94,19 @@ nrr-core/
 │   └── run_turn1_entropy.py        # Main experiment (reproduces Table 1)
 ├── manuscript/
 │   ├── current/
-│   │   ├── paper1_nrr-core_v43.tex
-│   │   ├── figure_nrr_experiment.png
-│   │   └── checksums_sha256.txt
+│   │   ├── paper1_nrr-core_v44.tex
+│   │   └── paper1_nrr-core_v44.pdf
+│   ├── figures/
+│   │   └── figure_nrr_experiment.png
+│   ├── checksums_active_review_surface_sha256.txt
+│   ├── checksums_current_package_sha256.txt
 │   └── archive/
 │       └── ...                     # Full-repo history; not required in narrow review surfaces
 ├── scripts/
 │   ├── build_current_manuscript.sh
+│   ├── README.md
 │   ├── run_primary_check.sh
+│   ├── verify_active_review_surface.sh
 │   └── verify_current_package.sh
 ├── VERSION_MAP.md
 └── results/
@@ -113,7 +118,7 @@ nrr-core/
 Published baseline and local archive mapping is maintained in [`VERSION_MAP.md`](./VERSION_MAP.md).
 
 - Current public arXiv line: `2512.13478v10`
-- Current narrow review-surface candidate: `manuscript/current/paper1_nrr-core_v43.tex`
+- Current narrow review-surface candidate: `manuscript/current/paper1_nrr-core_v44.tex`
 - Full-repo provenance rows are kept in `VERSION_MAP.md`; narrow review drops do
   not need to bundle each historical file listed there.
 
@@ -125,6 +130,7 @@ the assets explicitly listed in `reproducibility.md`.
 
 Stable review-package entrypoints:
 - `bash scripts/build_current_manuscript.sh`
+- `bash scripts/verify_active_review_surface.sh`
 - `bash scripts/verify_current_package.sh`
 - `bash scripts/run_primary_check.sh`
 
@@ -211,7 +217,7 @@ No deep learning framework required. All operations are pure NumPy.
 - [NRR-Transfer](https://github.com/kei-saito-research/nrr-transfer) - Cross-domain transfer validation
 - [NRR-Coupled](https://github.com/kei-saito-research/nrr-coupled) - Dependency-aware coupled updates
 - [NRR-Projection](https://github.com/kei-saito-research/nrr-projection) - Projection-side structural bridge
-- [NRR-Principles](https://github.com/kei-saito-research/nrr-principles) - Integrated `paper7` comparison and boundary-honesty line
+- [NRR-Patterns](https://github.com/kei-saito-research/nrr-patterns) - Delayed-commitment pattern comparison and boundary-honesty line
 
 ## Citation
 

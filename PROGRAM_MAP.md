@@ -7,9 +7,9 @@ README / reproducibility notes rather than treating it as a full public-status b
 
 ## Current Series Spine
 
-- `Core -> Phi -> IME / Transfer / Coupled -> Projection -> integrated paper7 -> Energy -> Guarantee`
+- `Core -> Phi -> IME / Transfer / Coupled -> Projection -> NRR-Patterns -> Energy -> Guarantee`
 - `Projection` is the structural bridge / companion line after the interface and
-  propagation papers and before integrated `paper7`.
+  propagation papers and before `NRR-Patterns`.
 - `Energy` is the operational-control / conditional-utility calibration layer.
 - `Guarantee` is the bounded verification / assurance closure layer.
 - The numbered-paper map below covers the canonical numbered papers (`paper1`,
@@ -25,7 +25,7 @@ README / reproducibility notes rather than treating it as a full public-status b
   - `paper4`: IME
   - `paper5`: Transfer
   - `paper6`: Coupled
-  - `paper7`: integrated paper7
+  - `paper7`: `NRR-Patterns`
 
 ## Read Order
 1. **paper1 / NRR-Core** (foundation)
@@ -35,7 +35,7 @@ README / reproducibility notes rather than treating it as a full public-status b
 5. **paper5 / NRR-Transfer** (cross-domain transfer; pre-submission line)
 6. **paper6 / NRR-Coupled** (dependency-consistency for coupled updates; pre-submission line)
 7. **NRR-Projection** (structural bridge / companion line)
-8. **paper7 / integrated NRR-Principles+Boundary line** (comparison-and-boundary-honesty layer; pre-submission line)
+8. **paper7 / NRR-Patterns** (comparison-and-boundary-honesty layer; pre-submission line)
 9. **NRR-Energy** (operational-control / conditional-utility calibration line)
 10. **NRR-Guarantee** (bounded verification / assurance closure line)
 
@@ -66,9 +66,9 @@ README / reproducibility notes rather than treating it as a full public-status b
 - Paper: arXiv submission pending
 - Code: [github.com/kei-saito-research/nrr-coupled](https://github.com/kei-saito-research/nrr-coupled)
 
-### paper7) integrated NRR-Principles+Boundary line
+### paper7) NRR-Patterns
 - Paper: in preparation
-- Code: [github.com/kei-saito-research/nrr-principles](https://github.com/kei-saito-research/nrr-principles)
+- Code: [github.com/kei-saito-research/nrr-patterns](https://github.com/kei-saito-research/nrr-patterns)
 
 ### NRR-Projection
 - Paper: local theory-line manuscript
@@ -93,7 +93,7 @@ README / reproducibility notes rather than treating it as a full public-status b
 - **Transfer**: Tests whether the same Phase 1.5 interface transfers across domains.
 - **Coupled**: Tests dependency-consistency behavior under coupled client-side updates.
 - **Projection**: Provides the theory-first structural bridge from the retained-state layer to the later comparison-and-boundary surfaces.
-- **integrated paper7**: Carries the delayed-commitment pattern comparison together with explicit boundary-honesty reporting.
+- **NRR-Patterns**: Carries the delayed-commitment pattern comparison together with explicit boundary-honesty reporting.
 - **Energy**: Carries the operational-control / conditional-utility calibration layer.
 - **Guarantee**: Carries the bounded verification / assurance closure layer.
 - **HOUT**: Measures ambiguity preserved on the output side (`H_out`) as a diagnostic layer.
@@ -101,7 +101,7 @@ README / reproducibility notes rather than treating it as a full public-status b
 ## Repro Entry Points
 - Core: `experiments/run_turn1_entropy.py`
 - Phi: see repository `README` and `experiments/`
-- IME / Transfer / Coupled / Projection / integrated paper7 / Energy / Guarantee: see each repository `README` and reproducibility guide.
+- IME / Transfer / Coupled / Projection / `NRR-Patterns` / Energy / Guarantee: see each repository `README` and reproducibility guide.
 
 ## Contact
 Questions, implementation discussions, and collaboration ideas are welcome via GitHub Issues / Discussions on the repositories above.
