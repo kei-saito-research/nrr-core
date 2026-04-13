@@ -1,11 +1,11 @@
 # NRR-Core
 
-NRR-Core develops a **foundational ambiguity-preserving inference** framework for modern language models and evaluates it in a controlled Turn 1 entropy verification setting. We study how to reduce **premature commitment in LLM decoding** when context is incomplete, while keeping final commitment available once conditions support fixation. This repository packages the synthetic baseline-vs-NRR-lite verification code, reproducibility assets, and public-track manuscript mapping for the NRR series. It is designed to make the foundational criterion explicit: define measurable non-collapse criteria, run paired checks, and report boundary conditions where the matched single-state baseline remains competitive.
+NRR-Core develops a **foundational ambiguity-preserving inference** framework for modern language models and evaluates it in a controlled Turn 1 entropy verification setting. We study how to reduce **premature commitment in LLM decoding** when context is incomplete, while keeping final commitment available once conditions support fixation. This repository packages the synthetic baseline-vs-NRR-lite verification code, the manuscript snapshot, and reproducibility assets for the Core line. It is designed to make the foundational criterion explicit: define measurable non-collapse criteria, run paired checks, and report boundary conditions where the matched single-state baseline remains competitive.
 
 **Quick links**
 - [arXiv: 2512.13478](https://arxiv.org/abs/2512.13478)
 - [Positioning (NRR vs related approaches)](./docs/positioning.md)
-- [Search Keywords and Weekly Rank Log](./docs/keywords.md)
+- [Search Keywords and Reader Guide](./docs/keywords.md)
 
 **EN/JA query terms**
 - `early commitment` = `早期確定`
@@ -18,18 +18,15 @@ For the cross-paper map and current series links, start here:
 - (repository map) [NRR Program Map](./PROGRAM_MAP.md)
 
 Version mapping source of truth: [`VERSION_MAP.md`](./VERSION_MAP.md)
-For narrow review surfaces, use the current-package sections below first; the
-version map remains a full-repo provenance record and may mention non-bundled
-historical rows.
+For the current package snapshot, start with the sections below; `VERSION_MAP.md`
+remains the broader version history reference.
 
-Part of the Non-Resolution Reasoning (NRR) research program. In the current spine, this repository is the foundation layer that feeds Phi, IME, Transfer, Coupled, Projection, and `NRR-Patterns`, with downstream carry-forward into Energy and Guarantee.
+Part of the Non-Resolution Reasoning (NRR) research program. This repository presents the foundation layer and bundles the manuscript, figure, and verification artifacts for that line.
 
-Publication status:
+Current manuscript status:
 - Current public manuscript on arXiv: `2512.13478v10`
-- Current narrow review-surface candidate: `manuscript/current/paper1_nrr-core_v44.tex`
-- Full-repo provenance rows, including the public-current `v39` line, the prior
-  derived `v40`/`v41`/`v42`/`v43` lines, and older historical rows, remain recorded
-  in `VERSION_MAP.md` and may be omitted from narrow review drops.
+- Current manuscript snapshot: `manuscript/current/paper1_nrr-core_v45.tex`
+- Earlier package versions remain recorded in `VERSION_MAP.md`.
 - Series numbering policy: `paper3` is permanently skipped and never reused.
 
 ## DOI
@@ -94,14 +91,14 @@ nrr-core/
 │   └── run_turn1_entropy.py        # Main experiment (reproduces Table 1)
 ├── manuscript/
 │   ├── current/
-│   │   ├── paper1_nrr-core_v44.tex
-│   │   └── paper1_nrr-core_v44.pdf
+│   │   ├── paper1_nrr-core_v45.tex
+│   │   └── paper1_nrr-core_v45.pdf
 │   ├── figures/
 │   │   └── figure_nrr_experiment.png
 │   ├── checksums_active_review_surface_sha256.txt
 │   ├── checksums_current_package_sha256.txt
 │   └── archive/
-│       └── ...                     # Full-repo history; not required in narrow review surfaces
+│       └── ...                     # Full-repo history
 ├── scripts/
 │   ├── build_current_manuscript.sh
 │   ├── README.md
@@ -115,20 +112,15 @@ nrr-core/
 
 ## Manuscript Artifacts
 
-Published baseline and local archive mapping is maintained in [`VERSION_MAP.md`](./VERSION_MAP.md).
+Published and local version mapping is maintained in [`VERSION_MAP.md`](./VERSION_MAP.md).
 
 - Current public arXiv line: `2512.13478v10`
-- Current narrow review-surface candidate: `manuscript/current/paper1_nrr-core_v44.tex`
-- Full-repo provenance rows are kept in `VERSION_MAP.md`; narrow review drops do
-  not need to bundle each historical file listed there.
+- Current manuscript snapshot: `manuscript/current/paper1_nrr-core_v45.tex`
+- Earlier package versions remain recorded in `VERSION_MAP.md`.
 
-## Review Surface Contract
+## Package Entry Points
 
-This README describes the current-candidate audit surface. Full-repo provenance
-history remains recorded in `VERSION_MAP.md`, but narrow review drops only need
-the assets explicitly listed in `reproducibility.md`.
-
-Stable review-package entrypoints:
+Primary package entrypoints:
 - `bash scripts/build_current_manuscript.sh`
 - `bash scripts/verify_active_review_surface.sh`
 - `bash scripts/verify_current_package.sh`

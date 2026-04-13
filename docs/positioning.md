@@ -1,24 +1,28 @@
-# NRR Positioning: Ambiguity-Preserving Inference vs Nearby Methods
+# NRR-Core Positioning
 
-NRR targets **ambiguity-preserving inference** for practical LLM systems. The main risk addressed is **premature commitment in LLM decoding** and downstream rework from **semantic collapse**. NRR controls **defer vs commit** timing under explicit conditions rather than forcing universal abstention or universal commitment.
+This note gives a short public-facing view of where the NRR-Core line sits among nearby approaches. The focus is ambiguity-preserving inference at the foundation level: keeping multiple plausible interpretations available before disambiguating context arrives, then allowing commitment when later evidence supports it.
 
-## NRR vs Nearby Concepts (What It Solves / Does Not Solve)
+NRR-Core is not a replacement for standard LLM use. In this line, the contribution is the foundational criterion itself: make early collapse measurable, compare it against an ambiguity-preserving variant, and report the conditions under which preservation and later commitment can coexist.
 
-| Approach | What it solves | What it does not solve | Difference from NRR |
-| --- | --- | --- | --- |
-| Fuzzy reasoning | Represents graded truth or soft category boundaries. | Does not directly manage multiple discrete interpretations across multi-turn LLM inference. | NRR keeps competing interpretations as state candidates and delays commitment by policy. |
-| Calibrated abstention | Decides whether to answer or abstain when confidence is low. | Does not preserve internal contradictory interpretations for later reuse. | NRR preserves alternatives internally, then chooses defer/commit at output boundaries. |
-| WSD (word sense disambiguation) | Selects one word sense from local context. | Does not target global ambiguity persistence under context shifts. | NRR treats unresolved multiplicity as valid state, not only as an error to eliminate. |
+## How It Relates to Nearby Approaches
 
-## Boundary Conditions
+| Approach | Typical focus | How NRR-Core differs |
+| --- | --- | --- |
+| Fuzzy reasoning | Represents graded truth or soft category boundaries. | NRR-Core focuses on preserving multiple discrete interpretations before context resolves them. |
+| Calibrated abstention | Decides whether to answer or abstain under low confidence. | NRR-Core focuses on internal ambiguity preservation before the final response decision. |
+| Word sense disambiguation | Chooses one sense from local context. | NRR-Core focuses on whether collapse can be delayed until later context arrives. |
 
-- NRR is not anti-LLM and does not replace standard LLM use.
-- Do not claim: NRR is a universal replacement for standard LLM usage.
-- NRR is evaluated as conditional utility under specific tasks and protocols.
-- This page is for positioning; formal definitions remain in manuscript and reproducibility docs.
+## What This Repository Covers
+
+- Foundational ambiguity-preserving inference and Turn 1 entropy evaluation.
+- Paired comparison between a matched baseline and an ambiguity-preserving variant.
+- Manuscript, reproducibility, and verification materials for the Core line.
+
+Formal definitions, experiments, and limitations remain in the manuscript and reproducibility materials.
 
 ## Navigation
 
 - [README](../README.md)
-- [Search Keywords and Weekly Rank Log](./keywords.md)
-- arXiv: https://arxiv.org/abs/2512.13478
+- [Reproducibility](../reproducibility.md)
+- [Search Keywords and Reader Guide](./keywords.md)
+- [arXiv: 2512.13478](https://arxiv.org/abs/2512.13478)
