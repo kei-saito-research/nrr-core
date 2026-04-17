@@ -25,7 +25,7 @@ Part of the Non-Resolution Reasoning (NRR) research program. This repository pre
 
 Current manuscript status:
 - Current public manuscript on arXiv: `2512.13478v10`
-- Current manuscript snapshot: `manuscript/current/paper1_nrr-core_v45.tex`
+- Current manuscript snapshot: `manuscript/current/paper1_nrr-core_v51.tex`
 - Earlier package versions remain recorded in `VERSION_MAP.md`.
 - Series numbering policy: `paper3` is permanently skipped and never reused.
 
@@ -91,8 +91,8 @@ nrr-core/
 │   └── run_turn1_entropy.py        # Main experiment (reproduces Table 1)
 ├── manuscript/
 │   ├── current/
-│   │   ├── paper1_nrr-core_v45.tex
-│   │   └── paper1_nrr-core_v45.pdf
+│   │   ├── paper1_nrr-core_v51.tex
+│   │   └── paper1_nrr-core_v51.pdf
 │   ├── figures/
 │   │   └── figure_nrr_experiment.png
 │   ├── checksums_active_review_surface_sha256.txt
@@ -115,7 +115,7 @@ nrr-core/
 Published and local version mapping is maintained in [`VERSION_MAP.md`](./VERSION_MAP.md).
 
 - Current public arXiv line: `2512.13478v10`
-- Current manuscript snapshot: `manuscript/current/paper1_nrr-core_v45.tex`
+- Current manuscript snapshot: `manuscript/current/paper1_nrr-core_v51.tex`
 - Earlier package versions remain recorded in `VERSION_MAP.md`.
 
 ## Package Entry Points
