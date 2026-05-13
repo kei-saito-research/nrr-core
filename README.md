@@ -29,9 +29,11 @@ Current manuscript status:
 - Earlier package versions remain recorded in `VERSION_MAP.md`.
 - Series numbering policy: `paper3` is permanently skipped and never reused.
 
-## DOI
+## DOI / Archive
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18793554.svg)](https://doi.org/10.5281/zenodo.18793554)
+- Archive concept DOI: [10.5281/zenodo.18793553](https://doi.org/10.5281/zenodo.18793553)
+- Latest inspected archived snapshot: [10.5281/zenodo.18866846](https://doi.org/10.5281/zenodo.18866846)
+- Earlier exact snapshot retained for provenance: [10.5281/zenodo.18793554](https://doi.org/10.5281/zenodo.18793554)
 
 ## Overview
 
